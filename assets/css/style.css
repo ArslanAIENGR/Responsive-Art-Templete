@@ -19,7 +19,7 @@
 
 .auto-container {
     max-width: 900px;
-    padding: 0;
+    padding: 0 20px;
     margin: 0 auto;
 }
 
@@ -31,7 +31,7 @@
 
 .art-container {
     max-width: 1500px;
-    padding: 0;
+    padding: 0 10px;
     margin: 0 auto;
 }
 
@@ -242,31 +242,25 @@ footer a:hover {
        MEDIA QUERIES
 ============================ */
 
-/* For phones */
-@media (max-width: 600px) {
+
+/* For laptops and desktops */
+@media (min-width: 769px) {
     .nav-bar li {
-        display: block;
-        text-align: center;
-        padding: 10px 0;
+        display: inline-block;
+        font-size: 24px;
     }
-    .nav-left, .nav-right {
-        float: none;
+    .nav-left {
+        float: left;
+    }
+    .nav-right {
+        float: right;
     }
     .art-left, .art-right {
-        width: 100%;
-        float: none;
+        width: 50%;
+        float: left;
     }
     .about img {
-        max-width: 100%;
-    }
-    .auto-container {
-        padding: 0 5px;
-    }
-    .nav-bar {
-        padding: 16px 8px;
-    }
-    .nav-bar a {
-        padding: 8px;
+        width: 300px;
     }
 }
 
@@ -298,23 +292,30 @@ footer a:hover {
     }
 }
 
-/* For laptops and desktops */
-@media (min-width: 769px) {
+/* For phones */
+@media (max-width: 600px) {
     .nav-bar li {
-        display: inline-block;
-        font-size: 24px;
+        display: block;
+        text-align: center;
+        padding: 10px 0;
     }
-    .nav-left {
-        float: left;
-    }
-    .nav-right {
-        float: right;
+    .nav-left, .nav-right {
+        float: none;
     }
     .art-left, .art-right {
-        width: 50%;
-        float: left;
+        width: 100%;
+        float: none;
     }
     .about img {
-        width: 300px;
+        max-width: 100%;
+    }
+    .auto-container {
+        padding: 0 5px;
+    }
+    .nav-bar {
+        padding: 16px 8px;
+    }
+    .nav-bar a {
+        padding: 8px;
     }
 }
